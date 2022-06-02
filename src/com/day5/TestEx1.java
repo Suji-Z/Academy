@@ -8,7 +8,7 @@ public class TestEx1 {
 		Scanner sc = new Scanner(System.in);
 		
 		int num[] = new int[5];
-		int i,j = 0,temp=0;
+		int i;
 
 		System.out.print("5개의 정수 입력: ");
 		
