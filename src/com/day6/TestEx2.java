@@ -21,7 +21,7 @@ public class TestEx2 {
 		
 		n = 0;
 		int cnt,answer;
-	
+
 		while(true) {
 			num[n] = rd.nextInt(10)+1; 	// num[0]은 0부터 시작하기때문에 +1
 		
