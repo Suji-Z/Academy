@@ -74,6 +74,7 @@ public class ScoreImpl implements Score{
 		System.out.println("삭제할 학번: ");
 		hak = sc.next();
 		
+			
 			if(searchHak(hak)) {
 				hMap.remove(hak);
 				System.out.println("정상적으로 삭제되었습니다.");
@@ -88,11 +89,12 @@ public class ScoreImpl implements Score{
 		System.out.println("수정할 학번: ");
 		hak = sc.next();
 
-			if(searchHak(hak)) {
-				ScoreVO vo = new ScoreVO();
-				
-				System.out.print("이름 입력: ");
-				vo.setName(sc.next());
+			if(!searchHak(hak)) {
+				System.out.println("수정 실패");
+				return;
+			}
+		
+				ScoreVO vo = hMap.get(hak);
 				
 				System.out.print("국어 점수: ");
 				vo.setKor(sc.nextInt());
@@ -106,23 +108,22 @@ public class ScoreImpl implements Score{
 				hMap.put(hak, vo);
 				
 				System.out.println("-------수정 성공-------");
-				
+
 		}
-	}
+	
 
 	@Override
 	public void findHak() {
 	
 		System.out.print("검색할 학번: ");
 		hak = sc.next();
+		
+			if(!searchHak(hak)) {
+				System.out.println("학번이 존재하지 않습니다.");
+			}
 
-			if(searchHak(hak)) {
 				ScoreVO vo = hMap.get(hak);
 				System.out.println(hak + " " + vo.toString());
-
-			
-		}
-		
 	}
 
 	@Override
