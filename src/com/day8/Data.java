@@ -4,7 +4,6 @@ public class Data {
 	
 	String name;
 	int t,p,sum, tot;
-
 	
 	int cnt[] = new int[2];		 //옷 구매 갯수 (상의: n 하의:n)
 	

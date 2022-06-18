@@ -133,13 +133,21 @@ public class ScoreImpl implements Score{
 		System.out.print("검색할 이름: ");
 		String name = sc.next();
 		
+		boolean flag = false;
+		
 		while(it.hasNext()) {
 			String str = it.next();
 			ScoreVO vo = hMap.get(str);
 			if(vo.getName().equals(name)) {
 				System.out.println(str + " " + vo.toString());
-				break;
+				flag = true;
 				}
 			}
+		if(flag) {
+			System.out.println("검색 성공");
+		}else {
+			System.out.println("이름이 존재하지 않습니다.");
+		}
+			
 		}
 }

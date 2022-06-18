@@ -74,7 +74,6 @@ public class Customer {
 			
 			
 	
-	
 	public void print() {
 		
 		sale();

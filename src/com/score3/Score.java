@@ -1,5 +1,7 @@
 package com.score3;
 
+import java.io.IOException;
+
 public interface Score {
 	
 	public void input();		//ют╥б

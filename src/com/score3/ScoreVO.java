@@ -53,7 +53,7 @@ public class ScoreVO { 		//Value Object	, 데이터 저장 공간
 		this.mat = mat;
 	}
 	
-	public int getTot() {		//왜 set이 필요하지 않은지? kor,eng,mat을 각각 가져와 쓸거라?
+	public int getTot() {		
 		return kor+eng+mat;
 	}
 
