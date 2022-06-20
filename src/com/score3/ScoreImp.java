@@ -77,7 +77,6 @@ public class ScoreImp implements Score {
 			System.out.println("학번이 정상적으로 삭제되었습니다.");
 			break;
 			}
-	
 			
 		}
 
