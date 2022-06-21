@@ -130,7 +130,7 @@ class MyExcept extends Exception{
 			for(int i=0; i<tel.length(); i++) {
 				char ch = tel.charAt(i);
 				if(ch<'0' && ch>'9') {
-					throw new Exception("연락처는 11자리의 숫자로만 입력가능합니다.");
+					throw new Exception("연락처는 숫자로만 입력가능합니다.");
 				}
 				
 			}
@@ -155,26 +155,33 @@ public class DataImpl {
 			
 			System.out.print("아이디 입력: ");
 			String CusName = sc.next();
-			vo.setID(CusName);
+			
 			
 			if(CusName.equals(vo.getName())) {
 				System.out.println("이미 존재하는 ID 입니다.");
 				return;
 			}
 			
+			vo.setID(CusName);
 			exc.inputIDFormat(vo.getID());
 			
 		
 			System.out.print("비밀번호: ");
-			vo.setPw(sc.next());
+			String pw1 = sc.next();
 			
+			if(pw1.equals(vo.getPw())) {
+				System.out.println("이미 존재하는 패스워드 입니다.");
+				return;
+			}
+			
+			vo.setPw(pw1);
 			exc.inputPWFormat(vo.getPw());
 			
 			System.out.print("비밀번호 재확인: ");
-			String CusPw = sc.next();
+			String pw2 = sc.next();
 			
-			if(!CusPw.equals(vo.getPw())) {
-				System.out.println("비밀번호를 다시 입력해주세요.");
+			if(!pw2.equals(vo.getPw())) {
+				System.out.println("비밀번호가 일치하지 않습니다.");
 				return;
 				}
 			
@@ -289,5 +296,3 @@ public class DataImpl {
 	}
 	
 }
-
-

@@ -57,6 +57,10 @@ public class Test1 {
 			
 		}
 		
+		finally {	//에러 발생 여부와 상관없이 마지막줄에 출력(항상 보임)
+			
+		}
+		
 
 		
 		
